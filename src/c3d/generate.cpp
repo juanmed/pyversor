@@ -67,8 +67,8 @@ void def_generate(py::module &m) {
   });
   generate.def("expo", [](const c3d::bivector_t &b) {
     return  b * b * 0.5 + b + 1.0;
-    m[7] = bb[7];
-    return m;
+    // m[7] = bb[7];
+    // return m;
   });
   generate.def("outer_exp", [](const c3d::dual_line_t &b) {
     return Gen::outer_exponential(b);

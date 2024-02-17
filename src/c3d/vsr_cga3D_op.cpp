@@ -265,7 +265,7 @@ Pair Gen::atanh2(const Pair &p, VSR_PRECISION cs, bool bCW, bool bTwoPI) {
     norm = asinh(sq) / sq;
   } else if (tp < 0) {
     if (bCW) {
-      norm = -((bTwoPI ? TWOPI : PI) - atan2(sq, cs)) / sq; // alt direction
+      norm = -((bTwoPI ? TWOPI : VSR_PI) - atan2(sq, cs)) / sq; // alt direction
     } else {
       norm = atan2(sq, cs) / sq;
     }
@@ -285,7 +285,7 @@ VSR_PRECISION Gen::theta(const Bst &b, bool bCW, bool bTwoPI) {
     norm = asinh(sq) / sq;
   } else if (tp < 0) {
     if (bCW) {
-      norm = -((bTwoPI ? TWOPI : PI) - atan2(sq, cs)) / sq; // alt direction
+      norm = -((bTwoPI ? TWOPI : VSR_PI) - atan2(sq, cs)) / sq; // alt direction
     } else {
       norm = atan2(sq, cs) / sq;
     }
